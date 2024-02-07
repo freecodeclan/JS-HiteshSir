@@ -49,6 +49,11 @@
   newli.textContent = 'Swift' // Set the text content of the new list item to 'Swift'
   secondLang.replaceWith(newli) // Replace the second list item with the new list item
 
+  const firstLang = document.querySelector('li:first-child')
+  const firstLi = document.createElement('li')
+  firstLi.textContent = 'Typescript'
+  firstLang.replaceWith(firstLi)
+
 </script>
 
 </html>
