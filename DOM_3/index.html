@@ -42,11 +42,11 @@
   optimizedMethod('goLang')
 
   //--- Method to edit element 
-  const secondLang = document.querySelector('li:nth-child(2)')
+  const secondLang = document.querySelector('li:nth-child(2)') // Select the second list item from the document
   //-- secondLang.innerHTML = 'Ruby'
-  const newli = document.createElement('li')
-  newli.textContent = 'Swift'
-  secondLang.replaceWith(newli)
+  const newli = document.createElement('li') // Create a new list item element
+  newli.textContent = 'Swift' // Set the text content of the new list item to 'Swift'
+  secondLang.replaceWith(newli) // Replace the second list item with the new list item
 
 </script>
 
