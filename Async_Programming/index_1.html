@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous Programming</title>
+</head>
+
+<body>
+  <h1>Hey ! I am in Aysnc Part 2</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+</body>
+
+<script>
+  const sayDate = function () {
+    console.log('Hello', Date.now());
+  }
+
+  let interValid;
+
+  document.querySelector('#start').addEventListener('click', function () {
+    interValid = setInterval(sayDate, 1000)
+    console.log('Start Clicked');
+  })
+
+  document.querySelector('#stop').addEventListener('click', function () {
+    clearInterval(interValid)
+    console.log('Stoped');
+  })
+
+</script>
+
+</html>

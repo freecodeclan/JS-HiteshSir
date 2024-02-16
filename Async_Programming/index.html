@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous Programming</title>
+</head>
+
+<body>
+  <h1>Hello ! I am Aync Program</h1>
+  <button id="stop">Stop</button>
+</body>
+
+<script>
+  const greet = function () {
+    console.log('Hello Harsh');
+  }
+
+  const changeText = function () {
+    document.querySelector('h1').innerHTML = 'Hey ! I am new Version'
+  }
+
+  setTimeout(greet, 2000);
+  const changeMe = setTimeout(changeText, 3000);
+
+  //--- clearTimeout() method used to stop changeText function 
+
+  document.querySelector('#stop').addEventListener('click', function () {
+    clearTimeout(changeMe)
+    console.log('Stopped');
+  })
+
+
+</script>
+
+</html>
